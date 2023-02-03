@@ -19,6 +19,16 @@ let initials = userNames.map(function (fullName) {
 console.log(userNames);
 console.log(initials);                           // [ "Г.П.А.", "П.О.І.", "Р.А.О."]
 
+//варіант 2
+let userNamesSort = userNames.sort();
+const initials1 = userNames.map(function (userName) {
+    const arrayOfStrings = userName.split(' ');
+    const initials = arrayOfStrings.map(namePart => namePart.charAt(0));
+    const str = initials.join('.');
+    return str;
+})
+console.log(initials1);
+
 //-----------------------------------------------------------------------------------------------------------------------------
 
 // 2) Задача на розворот числа:
